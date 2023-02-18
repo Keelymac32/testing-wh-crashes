@@ -6,7 +6,7 @@ Data visualization of motor vehicle crashes in West Hartford CT from 2015 to pre
 - Live map https://bikewesthartford.github.io/wh-crashes
 
 ## Credits
-Adapted by [Jack Dougherty](https://jackdougherty.org) from the [original Hartford Crash Data heatmap](https://github.com/Picturedigits/hartford-crashes) created by Ilya Ilyankou at [Picturedigits](https://www.picturedigits.com) for Transport Hartford.
+Adapted by [Jack Dougherty](https://jackdougherty.org) from the [original Hartford Crash Data heatmap](https://github.com/Picturedigits/hartford-crashes) created by Ilya Ilyankou at [Picturedigits](https://www.picturedigits.com) for Transport Hartford. Slight modfications and backend improvements made by Undergrad student Keelyn McNamara. 
 
 The UConn Crash Data Repository <https://www.ctcrash.uconn.edu> is "designed to provide access to select crash information collected by state and local police." See notes on their site about data collection and intrepretation.
 
@@ -17,7 +17,7 @@ This open-source GitHub repository includes a JupyterLab notebook data processor
 
 ### Setup and Download Data from UConn Crash Repository
 1. Create your own fork of this GitHub repository. Recommended: Use GitHub Desktop to migrate files between your online repository and your local computer.
-2. Navigate to https://www.ctcrash.uconn.edu/ and create an account if you don't have one yet.
+2. Navigate to https://www.ctcrash.uconn.edu/ and create an account if you don't have one yet. 
 3. Log in, and go to `Data Query Tool`.
 4. Select a `MMUCC(2015-)` dataset, specify dates and town (or multiple towns).
 5. Run the query, and then click `Export To CSV` button above the interactive table. A link will be sent to your email account to download the archive. Note that the tool may prevent you from exporting datasets that are "too large". In that case, break down your query (for example, instead of downloading 2015-2020 data, do 2015-2018 as one export, and 2019-2020 as another).
