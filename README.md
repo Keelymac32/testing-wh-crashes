@@ -43,7 +43,7 @@ https://www.nhtsa.gov/mmucc-1
 Download MMUCC Guideline Model Minimum Uniform Crash Criteria 5th Edition (2017).pdf
 https://crashstats.nhtsa.dot.gov/Api/Public/Publication/812433
 
-Person Type Codes:
+### Person Type Codes Used:
 
 3 = Pedestrian
 4 = Other Pedestrian (wheelchair, person in building, skater, personal conveyance, etc.)
@@ -52,7 +52,7 @@ Person Type Codes:
 
 ## Note for UCONN Crash Data Crash Severity Codes
 
-Crash Severity Codes:
+### Crash Severity Meanings:
 
 K = Fatal: A fatal injury is any injury that results in death within 30 days after the motor vehicle crash in which the injury occurred. If the person did not die at the scene but died within 30 days of the motor vehicle crash in which the injury occurred, the injury classification should be changed from the attribute previously assigned to the attribute “Fatal Injury.”
 
@@ -72,7 +72,7 @@ C = Possible Injury: A possible injury is any injury reported or claimed which i
 
 O = No Apparent Injury: No apparent injury is a situation where there is no reason to believe that the person received any bodily harm from the motor vehicle crash. There is no physical evidence of injury and the person does not report any change in normal function.
 
-In Live Map Categories Include:
+### Crash Severity Codes Used:
 
 Fatal = K
 Suspected Other Injuries = A
