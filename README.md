@@ -3,7 +3,7 @@
 Data visualization of motor vehicle crashes in West Hartford CT from 2015 to present, displaying pre-processed data from UConn Crash Data Repository
 
 ## Links
-- Test Live map https://github.com/Keelymac32/testing-wh-crashes/settings/pages
+- Test Live map https://keelymac32.github.io/testing-wh-crashes/
 
 ## Links
 - Live map https://bikewesthartford.github.io/wh-crashes
