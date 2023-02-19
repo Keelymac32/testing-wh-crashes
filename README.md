@@ -1,9 +1,9 @@
-# West Hartford Crashes
+# Keelyn's Test Verison West Hartford Crashes
 
 Data visualization of motor vehicle crashes in West Hartford CT from 2015 to present, displaying pre-processed data from UConn Crash Data Repository
 
 ## Links
-- Live map https://bikewesthartford.github.io/wh-crashes
+- Live map https://github.com/Keelymac32/testing-wh-crashes/settings/pages
 
 ## Credits
 Adapted by [Jack Dougherty](https://jackdougherty.org) from the [original Hartford Crash Data heatmap](https://github.com/Picturedigits/hartford-crashes) created by Ilya Ilyankou at [Picturedigits](https://www.picturedigits.com) for Transport Hartford. Slight modfications and backend improvements made by Undergrad student Keelyn McNamara. 
