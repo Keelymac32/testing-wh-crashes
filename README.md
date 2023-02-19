@@ -79,7 +79,7 @@ O = No Apparent Injury: No apparent injury is a situation where there is no reas
 
 Fatal = K
 
-Suspected Other Injuries = A
+Suspected Serious Injuries = A
 
 Other Injuries = B,C
 
