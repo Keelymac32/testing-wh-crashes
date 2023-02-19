@@ -46,8 +46,11 @@ https://crashstats.nhtsa.dot.gov/Api/Public/Publication/812433
 ### Person Type Codes Used:
 
 3 = Pedestrian
+
 4 = Other Pedestrian (wheelchair, person in building, skater, personal conveyance, etc.)
+
 5 =  Other Cyclist
+
 ? = Other Cyclist
 
 ## Note for UCONN Crash Data Crash Severity Codes
@@ -75,8 +78,11 @@ O = No Apparent Injury: No apparent injury is a situation where there is no reas
 ### Crash Severity Codes Used:
 
 Fatal = K
+
 Suspected Other Injuries = A
+
 Other Injuries = B,C
+
 Property Damage = O 
 
 
