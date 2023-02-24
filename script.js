@@ -1,3 +1,4 @@
+//Setting Up Map 
 var map = L.map('map', {
     zoomControl: false,
     center: [41.761755, -72.765270],
@@ -7,6 +8,7 @@ var map = L.map('map', {
     preferCanvas: true
 })
 
+//Zoom Control 
 L.control.zoom({ position: 'topright' }).addTo(map)
 
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
@@ -15,6 +17,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png
     maxZoom: 19
 }).addTo(map)
 
+//Setting up Map Baselayer from supplied link 
 var labels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
     subdomains: 'abcd',
@@ -40,6 +43,7 @@ function tsToDate(ts) {
 var initFrom = dateToTS(new Date(2020, 0, 1));
 var initTo = dateToTS(new Date(2023, 1, 8));
 
+//function to look through data.csv that was created with jupyter script 
 Papa.parse('./data/crashes.csv', {
     download: true,
     header: true,
@@ -47,12 +51,13 @@ Papa.parse('./data/crashes.csv', {
     complete: function (result) {
 
         var data = result.data;
-
+        //adding points to heat map 
         var heat = L.heatLayer([], { radius: 20 }).addTo(map);
         var individualPoints = L.layerGroup().addTo(map);
 
         var tsCoef = 100000.0 // original timestamp needs to be multiplied by this to work in JS
-
+        
+        //formatting text that displays how many crashes satify the specified the desired conditions
         var updateStatsText = function (formattedFrom, formattedTo, crashesTotal, crashesPed, crashesCyc, filtered) {
             var text = formattedFrom === formattedTo
                 ? ('On ' + formattedFrom)
@@ -87,15 +92,15 @@ Papa.parse('./data/crashes.csv', {
             var crashes = data.filter(function (point) {
                 return point.d >= from && point.d <= to;
             })
-
+            // Filtering results for types of routes and added them to map when button pressed  
             var crashesFiltered = crashes.filter(function (point) {
                 return (($('#local').prop('checked') ? point.r !== 1 : false)
                     || ($('#highways').prop('checked') ? point.r === 1 : false))
-
+            // Filtering results for people involved and adding them to map when button pressed
                     && (($('#vehiclesOnly').prop('checked') ? (point.c === 0 && point.p === 0) : false)
                         || ($('#cyclists').prop('checked') ? point.c === 1 : false)
                         || ($('#pedestrians').prop('checked') ? point.p === 1 : false))
-
+            // Filtering results for major injury and adding them to map when button pressed
                     && (($('#propertyDamage').prop('checked') ? point.s === 'O' : false)
                         || ($('#suspectedSeriousInjury').prop('checked') ? point.s === 'A' : false)
                         || ($('#otherInjuries').prop('checked') ? point.s === 'B' : false)
@@ -134,10 +139,11 @@ Papa.parse('./data/crashes.csv', {
                         opacity: 0.8,
                         weight: 0,
                     }).bindPopup(
+        //I am not sure what code is doing below
                         '<strong>Crash ID ' + crash.id + '</strong><br />'
                         + tsToDate(crash.d * tsCoef) + ' at ' + crash.t
                         + '<a href="' + diagramUrl + '" target="_blank"><img src="' + diagramUrl + '" alt="Crash diagram" /></a>'
-                        + '<br />Severity: ' + (crash.s === 'K' ? 'Fatal crash' : crash.s === 'A' ? 'Injury of any type' : 'Property damage only'),
+                        + '<br />Severity: ' + (crash.s === 'K' ? 'Fatal crash' : crash.s === 'A' ? 'Suspected Serious Injury' : 'Property damage only'),
                         { minWidth: 300 }
                     )
 
