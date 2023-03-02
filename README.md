@@ -9,7 +9,7 @@ Data visualization of motor vehicle crashes in West Hartford CT from 2015 to pre
 - Live map https://bikewesthartford.github.io/wh-crashes
 
 ## Credits
-Adapted by [Jack Dougherty](https://jackdougherty.org) from the [original Hartford Crash Data heatmap](https://github.com/Picturedigits/hartford-crashes) created by Ilya Ilyankou at [Picturedigits](https://www.picturedigits.com) for Transport Hartford. Python and Javascript edits and scrubbing by [Keelyn McNamara] (https://www.kmcnamaradesign.com/) undergrad at Trinity College. 
+Adapted by [Jack Dougherty](https://jackdougherty.org) from the [original Hartford Crash Data heatmap](https://github.com/Picturedigits/hartford-crashes) created by Ilya Ilyankou at [Picturedigits](https://www.picturedigits.com) for Transport Hartford. Python and Javascript edits and scrubbing by [Keelyn McNamara](https://www.kmcnamaradesign.com/) Trinity College 2023. 
 
 The UConn Crash Data Repository <https://www.ctcrash.uconn.edu> is "designed to provide access to select crash information collected by state and local police." See notes on their site about data collection and intrepretation.
 
@@ -49,13 +49,13 @@ https://crashstats.nhtsa.dot.gov/Api/Public/Publication/812433
 
 4 = Other Pedestrian (wheelchair, person in building, skater, personal conveyance, etc.)
 
-5 =  Other Cyclist
-
-? = Other Cyclist
+5 =  Bicyclist
 
 ## Note for UCONN Crash Data Crash Severity Codes
 
-### Crash Severity Meanings:
+### Most Severe Injury Meaning and Definition:
+
+Most Severe Injury is based on the most severe injury out of all the injuries reported. This means that if the crash had several partcipants with injuries only the worst of those injuries is being recorded for this data set. Most Severe Injury is categoriezed into the 5 codes below. These definitions are not our own and come from the Model Minimum Uniform Crash Criteria (MMUCC) Guideline.   
 
 K = Fatal: A fatal injury is any injury that results in death within 30 days after the motor vehicle crash in which the injury occurred. If the person did not die at the scene but died within 30 days of the motor vehicle crash in which the injury occurred, the injury classification should be changed from the attribute previously assigned to the attribute “Fatal Injury.”
 
@@ -75,7 +75,9 @@ C = Possible Injury: A possible injury is any injury reported or claimed which i
 
 O = No Apparent Injury: No apparent injury is a situation where there is no reason to believe that the person received any bodily harm from the motor vehicle crash. There is no physical evidence of injury and the person does not report any change in normal function.
 
-### Crash Severity Codes Used:
+### Most Severe Injury Codes Used For Our Live Map:
+
+On the map you will notice 4 different check box options for Most Severe Injury. Here is how we categorized each severity. Review codes above for their corresponding severity and definition. 
 
 Fatal = K
 
@@ -86,7 +88,7 @@ Other Injuries = B,C
 Property Damage = O 
 
 
-### Modify the Leaflet map settings
+## Modify the Leaflet map settings
 1. Modify the `index.html` of the Leaflet map in your forked GitHub repository to set custom map title, and `script.js` to change initial coordinates, date ranges, and anything else related to the map. For example, see around line 38
 ```
 // display initial data, where Jan = 0 and Dec = 11

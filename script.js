@@ -102,9 +102,9 @@ Papa.parse('./data/crashes.csv', {
                         || ($('#pedestrians').prop('checked') ? point.p === 1 : false))
             // Filtering results for major injury and adding them to map when button pressed
                     && (($('#propertyDamage').prop('checked') ? point.s === 'O' : false)
-                        || ($('#suspectedSeriousInjury').prop('checked') ? point.s === 'A' : false)
-                        || ($('#otherInjuries').prop('checked') ? point.s === 'B' : false)
-                        || ($('#otherInjuries').prop('checked') ? point.s === 'C' : false)
+                        || ($('#seriousInjury').prop('checked') ? point.s === 'A' : false)
+                        || ($('#minorInjury').prop('checked') ? point.s === 'B' : false)
+                        || ($('#minorInjury').prop('checked') ? point.s === 'C' : false)
                         || ($('#fatal').prop('checked') ? point.s === 'K' : false))
             });
 
@@ -143,7 +143,7 @@ Papa.parse('./data/crashes.csv', {
                         '<strong>Crash ID ' + crash.id + '</strong><br />'
                         + tsToDate(crash.d * tsCoef) + ' at ' + crash.t
                         + '<a href="' + diagramUrl + '" target="_blank"><img src="' + diagramUrl + '" alt="Crash diagram" /></a>'
-                        + '<br />Severity: ' + (crash.s === 'K' ? 'Fatal crash' : crash.s === 'A' ? 'Suspected Serious Injury' : 'Property damage only'),
+                        + '<br />Injury Severity: ' + (crash.s === 'K' ? 'Fatal crash' : crash.s === 'A' ? 'Serious Injury' : crash.s === 'B' ? 'Minor Injury' : crash.s === 'C' ? 'Minor Injury' : 'Property damage only'),
                         { minWidth: 300 }
                     )
 
