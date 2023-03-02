@@ -51,11 +51,11 @@ https://crashstats.nhtsa.dot.gov/Api/Public/Publication/812433
 
 5 =  Bicyclist
 
-## Note for UCONN Crash Data Crash Severity Codes
+## Note for UCONN Crash Data Injury Severity Codes
 
 ### Most Severe Injury Meaning and Definition:
 
-Most Severe Injury is based on the most severe injury out of all the injuries reported. This means that if the crash had several partcipants with injuries only the worst of those injuries is being recorded for this data set. Most Severe Injury is categoriezed into the 5 codes below. These definitions are not our own and come from the Model Minimum Uniform Crash Criteria (MMUCC) Guideline.   
+The crashes on this map disply Most Severe Injury. This statistic is based on the most severe injury out of all the injuries reported. This means that if the crash had several partcipants with injuries only the worst of those injuries is being recorded for this data set. Most Severe Injury is categoriezed into the 5 codes below. These definitions are not our own and come from the Model Minimum Uniform Crash Criteria (MMUCC) Guideline.   
 
 K = Fatal: A fatal injury is any injury that results in death within 30 days after the motor vehicle crash in which the injury occurred. If the person did not die at the scene but died within 30 days of the motor vehicle crash in which the injury occurred, the injury classification should be changed from the attribute previously assigned to the attribute “Fatal Injury.”
 
