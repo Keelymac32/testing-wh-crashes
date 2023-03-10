@@ -94,8 +94,12 @@ Papa.parse('./data/crashes.csv', {
             })
             // Filtering results for types of routes and added them to map when button pressed  
             var crashesFiltered = crashes.filter(function (point) {
-                return (($('#local').prop('checked') ? point.r !== 1 : false)
+                return (($('#local').prop('checked') ? point.r === 4 : false)
                     || ($('#highways').prop('checked') ? point.r === 1 : false))
+                    || ($('#usroute').prop('checked') ? point.r === 2 : false))
+                    || ($('#state').prop('checked') ? point.r === 3 : false))
+                    || ($('#unknown').prop('checked') ? point.r === 0 : false))
+                    || ($('#unknown').prop('checked') ? point.r ===  : false))
             // Filtering results for people involved and adding them to map when button pressed
                     && (($('#vehiclesOnly').prop('checked') ? (point.c === 0 && point.p === 0) : false)
                         || ($('#cyclists').prop('checked') ? point.c === 1 : false)
