@@ -143,7 +143,7 @@ Papa.parse('./data/crashes.csv', {
                         opacity: 0.8,
                         weight: 0,
                     }).bindPopup(
-        //I am not sure what code is doing below
+                    // Populating pop up for individual crash info 
                         '<strong>Crash ID ' + crash.id + '</strong><br />'
                         + tsToDate(crash.d * tsCoef) + ' at ' + crash.t
                         + '<a href="' + diagramUrl + '" target="_blank"><img src="' + diagramUrl + '" alt="Crash diagram" /></a>'
