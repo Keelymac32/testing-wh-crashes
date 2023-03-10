@@ -96,10 +96,10 @@ Papa.parse('./data/crashes.csv', {
             var crashesFiltered = crashes.filter(function (point) {
                 return (($('#local').prop('checked') ? point.r === 4 : false)
                     || ($('#highways').prop('checked') ? point.r === 1 : false))
-                    || ($('#usroute').prop('checked') ? point.r === 2 : false))
-                    || ($('#state').prop('checked') ? point.r === 3 : false))
-                    || ($('#unknown').prop('checked') ? point.r === 0 : false))
-                    || ($('#unknown').prop('checked') ? point.r ===  : false))
+                    || ($('#usroute').prop('checked') ? point.r === 2 : false)
+                    || ($('#state').prop('checked') ? point.r === 3 : false)
+                    || ($('#unknown').prop('checked') ? point.r === 0 : false)
+                    || ($('#unknown').prop('checked') ? point.r === nil : false)
             // Filtering results for people involved and adding them to map when button pressed
                     && (($('#vehiclesOnly').prop('checked') ? (point.c === 0 && point.p === 0) : false)
                         || ($('#cyclists').prop('checked') ? point.c === 1 : false)
@@ -143,7 +143,7 @@ Papa.parse('./data/crashes.csv', {
                         opacity: 0.8,
                         weight: 0,
                     }).bindPopup(
-                    // Populating pop up for individual crash info 
+                    // Populating pop up for individual crash info
                         '<strong>Crash ID ' + crash.id + '</strong><br />'
                         + tsToDate(crash.d * tsCoef) + ' at ' + crash.t
                         + '<a href="' + diagramUrl + '" target="_blank"><img src="' + diagramUrl + '" alt="Crash diagram" /></a>'
